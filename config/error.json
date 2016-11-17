@@ -1,0 +1,23 @@
+{
+
+	"system": {
+		"bodyParsing": "Error parsing the body information"
+	},
+
+	"validation": {
+		"notSent": "You need to send a valid argument",
+		"notInteger": "The string sent must be a valid integer",
+		"notNumber": "The string sent must be a valid number",
+		"notDate": "The string sent must be a valid date"
+	},
+
+	"users": {
+		"userNotFound": "The users was not found on the database",
+		"userNotRegistered": "The user is not registered"
+	},
+
+	"password": {
+		"invalidHash": "This hash is not valid",
+		"expiredHash": "This hash is expired"
+	}
+}

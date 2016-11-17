@@ -1,0 +1,31 @@
+{
+	"port": 3000,
+	"timezone": -3,
+	"poweredBy": "all your base are belong to us",
+
+	"secretKey": "|nYVaZoA4|f+U/KM1Bcf]R:k;Rp<SN_t~]aKM~9OV@{WW 6*bW7/L>PnsYrJ9e;R",
+
+	"log": {
+		"removeVars": ["password", "pass", "key"]
+	},
+
+	"email": {
+		"provider": "sendgrid"
+	},
+
+	"ipList": {
+		"blackList": [],
+		"whiteList": []
+	},
+
+	"rateLimit": {
+		"duration": 3600,
+		"max": 50,
+		"context": "ip"
+	},
+
+	"mysql": {},
+	"mongodb": {},
+	"sendgrid": {},
+	"redis": {}
+}
