@@ -6,10 +6,10 @@ module.exports = Joi.extend({
 	base: Joi.string().trim().lowercase(),
 	name: 'string',
 	language: { cpf: 'must be a valid CPF number' },
-    rules: [{
-        name: 'cpf',
-        description: 'Valid CPF number',
-        validate(params, value, state, options) {
+	rules: [{
+		name: 'cpf',
+		description: 'Valid CPF number',
+		validate(params, value, state, options) {
 			if (!value) {
 				return this.createError('string.cpf', { v: value }, state, options);
 			}
@@ -54,57 +54,47 @@ module.exports = Joi.extend({
 			}
 
 			return cpf;
-        }
-    }]
+		}
+	}]
 
 }, {
 	base: Joi.string().trim().lowercase().email(),
 	name: 'string',
 	language: { checkDomain: 'must have a valid domain' },
-    rules: [{
-        name: 'checkDomain',
-        validate(params, value, state, options) {
-            return value; // Everything is OK
-        }
-    }]
+	rules: [{
+		name: 'checkDomain',
+		validate(params, value, state, options) {
+			return value; // Everything is OK
+		}
+	}]
 }, {
 	base: Joi.any(),
 	name: 'any',
 	language: { cep: 'must have a valid cep' },
-    rules: [{
-        name: 'cep',
-        validate(params, value, state, options) {
-            return value; // Everything is OK
-        }
-    }]
+	rules: [{
+		name: 'cep',
+		validate(params, value, state, options) {
+			return value; // Everything is OK
+		}
+	}]
 }, {
-	base: Joi.any(),
+	base: Joi.number().integer().min(10).max(99),
 	name: 'any',
 	language: { telefone: 'must have a valid brazilian telephone' },
-    rules: [{
-        name: 'telefone',
-        validate(params, value, state, options) {
-            return value; // Everything is OK
-        }
-    }]
+	rules: [{
+		name: 'telefone',
+		validate(params, value, state, options) {
+			return value; // Everything is OK
+		}
+	}]
 }, {
 	base: Joi.number().integer().min(10).max(99),
 	name: 'number',
 	language: { ddd: 'must have a valid ddd with only 2 numbers' },
-    rules: [{
-        name: 'ddd',
-        validate(params, value, state, options) {
-            return value; // Everything is OK
-        }
-    }]
-}, {
-	base: Joi.string().trim(),
-	name: 'string',
-	language: { uuid: 'must have a valid uuid' },
-    rules: [{
-        name: 'uuid',
-        validate(params, value, state, options) {
-            return value; // Everything is OK
-        }
-    }]
+	rules: [{
+		name: 'ddd',
+		validate(params, value, state, options) {
+			return value; // Everything is OK
+		}
+	}]
 });

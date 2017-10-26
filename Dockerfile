@@ -13,7 +13,7 @@ RUN rm /bin/sh \
 RUN useradd --user-group --create-home --shell /bin/false app
 
 ENV NODE_ENV production
-ENV NODE_VERSION v6.9.1
+ENV NODE_VERSION v8.1.3
 
 WORKDIR /opt/nvm
 RUN git clone https://github.com/creationix/nvm.git /opt/nvm \
@@ -28,14 +28,13 @@ ENV HOME /opt/src
 RUN chown -R app:app $HOME/*
 
 COPY ./package.json $HOME/package.json
+COPY ./package-lock.json $HOME/package-lock.json
 COPY ./yarn.lock $HOME/yarn.lock
 
 USER app
 WORKDIR $HOME
-RUN npm install -g node-gyp nan yarn
 
-RUN yarn cache clean \
-    && yarn install --production
+RUN yarn install --production
 
 USER root
 COPY . $HOME/

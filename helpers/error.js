@@ -4,6 +4,8 @@ const errorList = require('../config/error.json');
 
 var errorApi = {
 
+	list: errorList,
+
 	errorHandler(section, code, errorResponse) {
 		var returnedError = { success: false },
 			message = 'Error Unknow';

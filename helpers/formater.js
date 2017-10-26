@@ -14,7 +14,7 @@ var Formater = {
 		return formatedCNPJ;
 	},
 
-	formatCPFcpf(cpf) {
+	formatCPF(cpf) {
 		let formatedCPF = '';
 
 		formatedCNPJ += cpf.substr(0, 3) + '.'; // eslint-disable-line prefer-template no-magic-numbers
@@ -25,10 +25,10 @@ var Formater = {
 		return formatedCPF;
 	},
 
-	orderedUUID: function(uuid) {
+	orderedUUID(uuid) {
 		const uuidArray = uuid.split('-');
 
-		return uuidArray[ 2 ] + uuidArray[ 1 ] + uuidArray[ 0 ] + uuidArray[ 3 ] + uuidArray[ 4 ];
+		return uuidArray[2] + uuidArray[1] + uuidArray[0] + uuidArray[3] + uuidArray[4];
 	}
 
 };

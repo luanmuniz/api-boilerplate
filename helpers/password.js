@@ -36,11 +36,12 @@ var helperPassword = {
 			return false;
 		}
 
-		return this.context.crypto[method](arrayEmail[ 0 ] + this.secretKey + arrayEmail[ 1 ]);
+		return this.context.crypto[method](arrayEmail[0] + this.secretKey + arrayEmail[1]);
 	},
 
 	validateHash(hash, email, rawPassword, method = 'md5') {
-		var validHash = this.createHash(email, rawPassword, method);
+		let validHash = this.createHash(email, rawPassword, method);
+
 		return hash === validHash;
 	}
 

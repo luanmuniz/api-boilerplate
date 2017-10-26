@@ -25,6 +25,6 @@ class Crypto {
 		return Sse4Crc32.calculate(string);
 	}
 
-};
+}
 
 module.exports = Crypto;

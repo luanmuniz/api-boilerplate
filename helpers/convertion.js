@@ -5,7 +5,7 @@ const uppercaseDigits = digits.toUpperCase();
 const numbers = '0123456789';
 const moment = require('moment');
 
-var Convertion = {
+const Convertion = {
 
 	numberToString(number = 0, options = { allowUppercase: true, allowNumbers: true }) {
 		let allChars = digits;
@@ -21,12 +21,12 @@ var Convertion = {
 
 		let digitsArray = allChars.split('');
 
-		if (number === 0) {
-			return digitsArray[ 0 ];
+		if(number === 0) {
+			return digitsArray[0];
 		}
 
-		while (number > 0) {
-			hash.push(digitsArray[ number % digitsArray.length ]);
+		while(number > 0) {
+			hash.push(digitsArray[number % digitsArray.length]);
 			number = Math.floor(number / digitsLenght.length);
 		}
 
@@ -39,30 +39,30 @@ var Convertion = {
 		}
 
 		return false;
-	}
+	},
 
 	booleanParse(string) {
 		return (string === 'true' || string === true);
 	},
 
 	intParse(value = '', throwError) {
-		let c = parseInt(value, 10);
+		let parsedValue = parseInt(value, 10);
 
-		if (isNaN(c)) {
+		if(isNaN(parsedValue)) {
 			return Convertion.sendConvertionError(throwError, 'notInteger');
 		}
 
-		return c;
+		return parsedValue;
 	},
 
 	floatParse(value = '', throwError) {
-		let c = parseFloat(value);
+		let parsedValue = parseFloat(value);
 
-		if (isNaN(c)) {
+		if(isNaN(parsedValue)) {
 			return Convertion.sendConvertionError(throwError, 'notNumber');
 		}
 
-		return c;
+		return parsedValue;
 	},
 
 	dateFormat(value, formatFrom = 'MM-DD-YYY', formatTo = 'DD/MM/YYYY', throwError) {
@@ -72,7 +72,7 @@ var Convertion = {
 
 		let formatedDate = moment(value, formatFrom).utcOffset(this.context.config.timezone).format(formatTo);
 
-		if (!formatedDate.isValid()) {
+		if(!formatedDate.isValid()) {
 			return Convertion.sendConvertionError(throwError, 'notDate');
 		}
 
@@ -86,11 +86,13 @@ var Convertion = {
 
 		let formatedDate = moment.unix(unixTimestamp);
 
-		if (!formatedDate.isValid()) {
+		if(!formatedDate.isValid()) {
 			return Convertion.sendConvertionError(throwError, 'notTimestamp');
 		}
 
-		return formatedDate
+		return formatedDate;
 	}
 
-}
+};
+
+module.exports = Convertion;
