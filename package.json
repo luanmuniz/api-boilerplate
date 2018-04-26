@@ -39,26 +39,26 @@
   },
   "homepage": "https://github.com/luanmuniz/api-boilerplate#readme",
   "devDependencies": {
-    "code": "4.1.0",
-    "coveralls": "2.13.1",
+    "code": "5.2.0",
+    "coveralls": "3.0.0",
     "david": "11.0.0",
-    "eslint": "4.2.0",
-    "lab": "14.1.1",
+    "eslint": "4.19.1",
+    "lab": "15.4.1",
     "pre-commit": "1.2.2"
   },
   "dependencies": {
-    "joi": "10.6.0",
-    "koa": "2.3.0",
+    "joi": "13.2.0",
+    "koa": "2.5.1",
     "koa-bodyparser": "4.2.0",
-    "koa-compress": "2.0.0",
-    "koa-helmet": "3.2.0",
-    "koa-ip": "0.1.0",
-    "koa-ratelimit": "4.0.0",
+    "koa-compress": "3.0.0",
+    "koa-helmet": "4.0.0",
+    "koa-ip": "1.0.0",
+    "koa-ratelimit": "4.1.0",
     "koa-response-time": "2.0.0",
-    "marked": "0.3.6",
-    "moment": "2.18.1",
-    "redis": "2.7.1",
-    "sendgrid": "5.1.2",
-    "sse4_crc32": "5.1.1"
+    "marked": "0.3.19",
+    "moment": "2.22.1",
+    "redis": "2.8.0",
+    "sendgrid": "5.2.3",
+    "sse4_crc32": "5.2.0"
   }
 }
