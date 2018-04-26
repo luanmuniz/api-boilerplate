@@ -1,5 +1,7 @@
 Api Boilerplate
 =========
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/luanmuniz/api-boilerplate.svg)](https://greenkeeper.io/)
 [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url] [![Coverage Status][coverrals-image]][coverrals-url] [![Known Vulnerabilities][synk-image]][synk-url]
 
 An Api Boilerplate to start new projects
